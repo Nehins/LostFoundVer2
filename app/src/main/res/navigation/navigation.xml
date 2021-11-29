@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcome">
+
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.lostfound.Welcome"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcome_to_iniciSessio"
+            app:destination="@id/iniciSessio" />
+        <action
+            android:id="@+id/action_welcome_to_registre"
+            app:destination="@id/registre" />
+    </fragment>
+    <fragment
+        android:id="@+id/iniciSessio"
+        android:name="com.example.lostfound.iniciSessio"
+        android:label="iniciSessio"
+        tools:layout="@layout/fragment_inici_sessio">
+        <action
+            android:id="@+id/action_iniciSessio_to_animalsPerduts"
+            app:destination="@id/animalsPerduts" />
+    </fragment>
+    <fragment
+        android:id="@+id/registre"
+        android:name="com.example.lostfound.Registre"
+        android:label="Registre"
+        tools:layout="@layout/fragment_registre"/>
+    <fragment
+        android:id="@+id/animalsPerduts"
+        android:name="com.example.lostfound.animalsPerduts"
+        android:label="animalsPerduts" />
+</navigation>
