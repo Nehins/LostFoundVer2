@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/animalsPerduts"
+        android:title="Perduts"
+        android:icon="@drawable/iconomissing"/>
+
+    <item
+        android:id="@+id/animalsTrobats"
+        android:title="Trobats"
+        android:icon="@drawable/iconoencontrados"/>
+</menu>

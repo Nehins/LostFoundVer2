@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".animalsTrobats.AnimalsTrobats">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondoiniciosesion"
+        >
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/trobatsView"-->
+<!--            android:layout_width="405dp"-->
+<!--            android:layout_height="735dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:layout_editor_absoluteX="3dp" />-->
+
+        <ImageButton
+            android:id="@+id/afegirAnimalTrobat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="536dp"
+            android:layout_marginEnd="32dp"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/new_animal_round" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

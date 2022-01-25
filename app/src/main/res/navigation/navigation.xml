@@ -3,36 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/welcome">
+    app:startDestination="@id/animalsPerduts2">
+    <fragment
+        android:id="@+id/animalsPerduts2"
+        android:name="com.example.lostfound.animalsPerduts.animalsPerduts"
+        android:label="fragment_animals_perduts"
+        tools:layout="@layout/fragment_animals_perduts" >
+        <action
+            android:id="@+id/action_animalsPerduts2_to_selecionaAnimal"
+            app:destination="@id/selecionaAnimal" />
+    </fragment>
 
     <fragment
-        android:id="@+id/welcome"
-        android:name="com.example.lostfound.Welcome"
-        android:label="Welcome"
-        tools:layout="@layout/fragment_welcome">
+        android:id="@+id/animalsTrobats"
+        android:name="com.example.lostfound.animalsTrobats.animalsTrobats"
+        android:label="fragment_animals_trobats"
+        tools:layout="@layout/fragment_animals_trobats" >
         <action
-            android:id="@+id/action_welcome_to_iniciSessio"
-            app:destination="@id/iniciSessio" />
-        <action
-            android:id="@+id/action_welcome_to_registre"
-            app:destination="@id/registre" />
+            android:id="@+id/action_animalsTrobats_to_selecionaAnimal"
+            app:destination="@id/selecionaAnimal" />
     </fragment>
     <fragment
-        android:id="@+id/iniciSessio"
-        android:name="com.example.lostfound.iniciSessio"
-        android:label="iniciSessio"
-        tools:layout="@layout/fragment_inici_sessio">
+        android:id="@+id/selecionaAnimal"
+        android:name="com.example.lostfound.seleccioAnimal.SelecionaAnimal"
+        android:label="SelecionaAnimal" >
         <action
-            android:id="@+id/action_iniciSessio_to_animalsPerduts"
-            app:destination="@id/animalsPerduts" />
+            android:id="@+id/action_selecionaAnimal_to_formularioEncontrados"
+            app:destination="@id/formularioEncontrados" />
+        <action
+            android:id="@+id/action_selecionaAnimal_to_formularioPeridos"
+            app:destination="@id/formularioPeridos" />
     </fragment>
     <fragment
-        android:id="@+id/registre"
-        android:name="com.example.lostfound.Registre"
-        android:label="Registre"
-        tools:layout="@layout/fragment_registre"/>
+        android:id="@+id/formularioEncontrados"
+        android:name="com.example.lostfound.formularioEncontrados"
+        android:label="formularioEncontrados" />
     <fragment
-        android:id="@+id/animalsPerduts"
-        android:name="com.example.lostfound.animalsPerduts"
-        android:label="animalsPerduts" />
+        android:id="@+id/formularioPeridos"
+        android:name="com.example.lostfound.formularioPeridos"
+        android:label="formularioPeridos" />
+
 </navigation>

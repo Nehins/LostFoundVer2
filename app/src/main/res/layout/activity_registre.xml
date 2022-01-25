@@ -69,7 +69,7 @@
             android:background="@color/black"
             android:backgroundTint="@color/black"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -83,7 +83,7 @@
             android:background="@color/black"
             android:backgroundTint="@color/black"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textPassword"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -164,5 +164,6 @@
             android:layout_height="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

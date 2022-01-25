@@ -5,4 +5,12 @@
             @drawable/splash_background
         </item>
     </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryDark">@color/brown</item>
+        <item name="colorAccent">@color/brown</item>
+    </style>
 </resources>
