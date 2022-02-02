@@ -12,10 +12,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostfound.R
-import com.example.lostfound.animalsPerduts.AdapterPerduts
-import com.example.lostfound.animalsPerduts.perduts
 import com.example.lostfound.auxGeneral
-import com.example.lostfound.databinding.FragmentAnimalsPerdutsBinding
 import com.example.lostfound.databinding.FragmentAnimalsTrobatsBinding
 import com.google.firebase.firestore.*
 

@@ -19,6 +19,10 @@ import com.example.lostfound.databinding.FragmentAnimalSelecionatPerdutsBinding
 import com.example.lostfound.databinding.FragmentAnimalSelecionatTrobatBinding
 import com.example.lostfound.sharedPreferences.SharedApp
 import com.google.firebase.firestore.FirebaseFirestore
+import androidx.core.app.ActivityCompat.startActivityForResult
+
+
+
 
 
 class AnimalSelecionatTrobat : Fragment() {
@@ -57,6 +61,8 @@ class AnimalSelecionatTrobat : Fragment() {
             .addOnFailureListener { exception ->
                 Log.w(ContentValues.TAG, "Error getting documents: ", exception)
             }
+
+
 
 
         binding.telefon.setOnClickListener{
