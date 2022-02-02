@@ -1,8 +1,8 @@
-package com.example.lostfound.seleccioAnimal
+package com.example.lostfound
 
 import androidx.lifecycle.ViewModel
 
-class seleccioAnimalAux: ViewModel() {
+class auxGeneral: ViewModel() {
 
 
     //Quan hem seleicionat el animal, si el tipus de formulari es 1, anira al formulari d'animals perduts, si es 2, anira al formulari d'animals trobats
@@ -14,12 +14,13 @@ class seleccioAnimalAux: ViewModel() {
     fun getAnimal(): String { return tipusAnimal }
     fun setAnimal(tipus : String){ tipusAnimal = tipus}
 
-//    var telefon = "null"
-//    fun gettelefon(): String { return telefon }
-//    fun settelefon(tipus : String){telefon = tipus}
 
-    var posicioPerdut = ""
-    fun getPosicioPer() : String {return posicioPerdut}
-    fun setPosicioPer(posicio : String) {posicioPerdut = posicio}
+    var idPerdut = ""
+    fun getidPerdut() : String {return idPerdut}
+    fun setidPerdut(posicio : String) {idPerdut = posicio}
+
+    var idTrobat = ""
+    fun getidTrobat () : String {return idTrobat }
+    fun setidTrobat (posicio : String) {idTrobat  = posicio}
 
 }

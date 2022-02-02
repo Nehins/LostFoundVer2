@@ -1,42 +1,40 @@
-package com.example.lostfound.animalSelecionat
+package com.example.lostfound.animalsPerduts
 
 import android.content.ContentValues
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.Editable
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.lostfound.R
-import com.example.lostfound.animalsPerduts.Perduts
+import com.example.lostfound.auxGeneral
 import com.example.lostfound.databinding.FragmentAnimalSelecionatPerdutsBinding
-import com.example.lostfound.seleccioAnimal.seleccioAnimalAux
 import com.example.lostfound.sharedPreferences.SharedApp
-import com.google.firebase.firestore.*
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class animalSelecionatPerduts : Fragment() {
 
     private lateinit var db : FirebaseFirestore
-    private lateinit var aux : seleccioAnimalAux
+    private lateinit var aux : auxGeneral
 
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?,
                                savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentAnimalSelecionatPerdutsBinding>(inflater,
             R.layout.fragment_animal_selecionat_perduts,container,false)
 
-        aux = ViewModelProvider(requireActivity()).get(seleccioAnimalAux::class.java)
+        aux = ViewModelProvider(requireActivity()).get(auxGeneral::class.java)
         var identificarUsuari = ""
 
         db = FirebaseFirestore.getInstance()
-        db.collection("AnimalsPerduts").whereEqualTo("id", aux.getPosicioPer())
+        db.collection("AnimalsPerduts").whereEqualTo("id", aux.getidPerdut())
             .get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
@@ -72,7 +70,7 @@ class animalSelecionatPerduts : Fragment() {
 
         binding.trobatButton.setOnClickListener{
             if(identificarUsuari.equals(SharedApp.prefs.telefonUsuari)){
-                db.collection("AnimalsPerduts").document(aux.getPosicioPer())
+                db.collection("AnimalsPerduts").document(aux.getidPerdut())
                     .delete()
                     .addOnSuccessListener {
                         Toast.makeText(context, "L'animal s'ha qualificat com a trobat!", Toast.LENGTH_SHORT).show()

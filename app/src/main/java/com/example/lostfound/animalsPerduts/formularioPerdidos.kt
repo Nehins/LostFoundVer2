@@ -1,12 +1,6 @@
 package com.example.lostfound
 
-import android.app.ProgressDialog.show
-import android.content.ContentValues
-import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
-import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,10 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.example.lostfound.databinding.FragmentAnimalsTrobatsBinding
 import com.example.lostfound.databinding.FragmentFormularioPeridosBinding
-import com.example.lostfound.mainActivities.iniciSesio
-import com.example.lostfound.seleccioAnimal.seleccioAnimalAux
 import com.example.lostfound.sharedPreferences.SharedApp
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -26,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 
 class formularioPeridos : Fragment() {
     private val db = Firebase.firestore
-    private lateinit var aux : seleccioAnimalAux
+    private lateinit var aux : auxGeneral
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -41,7 +32,7 @@ class formularioPeridos : Fragment() {
         var descripcio = ""
         var tipus = ""
 
-        aux = ViewModelProvider(requireActivity()).get(seleccioAnimalAux::class.java)
+        aux = ViewModelProvider(requireActivity()).get(auxGeneral::class.java)
 
         binding.guardarInformacio.setOnClickListener{
             nom = binding.nomAnimal.text.toString()
@@ -89,7 +80,6 @@ class formularioPeridos : Fragment() {
             )
 
        document.set(animal)
-
 
     }
 

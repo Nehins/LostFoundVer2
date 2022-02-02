@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".animalsPerduts.animalSelecionatPerduts">
-
+        tools:context=".animalsTrobats.AnimalSelecionatTrobat">
 
         <TextView
             android:id="@+id/nom2"
@@ -42,11 +40,11 @@
             app:layout_constraintTop_toBottomOf="@+id/nom2" />
 
         <TextView
-            android:id="@+id/localidadPerdut"
+            android:id="@+id/localidadTrobat"
             android:layout_width="314dp"
             android:layout_height="29dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="57dp"
+            android:layout_marginEnd="56dp"
             android:background="@color/KJUGY"
             android:backgroundTint="@color/KJUGY"
             android:textColor="#000000"
@@ -83,9 +81,9 @@
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="177dp"
-            android:text="Ultima vegada visualitzar a:"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="304dp"
+            android:text="Trobat a :"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +101,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/localidadPerdut" />
+            app:layout_constraintTop_toBottomOf="@+id/localidadTrobat" />
 
         <TextView
             android:id="@+id/textView30"
@@ -146,5 +144,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/telefon" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout >
+</layout>

@@ -12,16 +12,16 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostfound.R
+import com.example.lostfound.auxGeneral
 import com.example.lostfound.databinding.FragmentAnimalsPerdutsBinding
-import com.example.lostfound.seleccioAnimal.seleccioAnimalAux
 import com.google.firebase.firestore.*
 
 
 class animalsPerduts : Fragment() {
 
-    private lateinit var aux : seleccioAnimalAux
+    private lateinit var aux : auxGeneral
     private lateinit var recycleView : RecyclerView
-    private lateinit var perdutsArraylist : ArrayList<Perduts>
+    private lateinit var perdutsArraylist : ArrayList<perduts>
     private lateinit var myAdapter : AdapterPerduts
     private lateinit var db : FirebaseFirestore
 
@@ -37,7 +37,7 @@ class animalsPerduts : Fragment() {
         perdutsArraylist = arrayListOf()
 
         myAdapter = AdapterPerduts(perdutsArraylist){ animal ->
-            aux.setPosicioPer(animal.id.toString())
+            aux.setidPerdut(animal.id.toString())
             view?.findNavController()?.navigate(R.id.action_animalsPerduts2_to_animalSelecionat)
 
         }
@@ -47,7 +47,7 @@ class animalsPerduts : Fragment() {
         EventChangeListener()
 
 
-        aux = ViewModelProvider(requireActivity()).get(seleccioAnimalAux::class.java)
+        aux = ViewModelProvider(requireActivity()).get(auxGeneral::class.java)
 
         binding.afegirAnimalPerdut.setOnClickListener{
             aux.setTipus(1)
@@ -69,7 +69,7 @@ class animalsPerduts : Fragment() {
                     }
                     for (dc : DocumentChange in value?.documentChanges!!){
                         if(dc.type == DocumentChange.Type.ADDED){
-                            perdutsArraylist.add(dc.document.toObject(Perduts::class.java))
+                            perdutsArraylist.add(dc.document.toObject(perduts::class.java))
                         }
                     }
 

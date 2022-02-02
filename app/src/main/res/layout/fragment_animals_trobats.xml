@@ -9,14 +9,18 @@
         android:layout_height="match_parent"
         android:background="@drawable/fondoiniciosesion"
         >
-
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/trobatsView"-->
-<!--            android:layout_width="405dp"-->
-<!--            android:layout_height="735dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            tools:layout_editor_absoluteX="3dp" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trobatsView"
+            android:layout_width="370dp"
+            android:layout_height="619dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="115dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/afegirAnimalTrobat"
@@ -28,14 +32,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/new_animal_round" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="54dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

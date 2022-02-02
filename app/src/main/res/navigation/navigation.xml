@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_animalsTrobats_to_selecionaAnimal"
             app:destination="@id/selecionaAnimal" />
+        <action
+            android:id="@+id/action_animalsTrobats_to_animalSelecionatTrobat"
+            app:destination="@id/animalSelecionatTrobat" />
     </fragment>
     <fragment
         android:id="@+id/selecionaAnimal"
@@ -39,8 +42,12 @@
     </fragment>
     <fragment
         android:id="@+id/formularioEncontrados"
-        android:name="com.example.lostfound.formularioEncontrados"
-        android:label="formularioEncontrados" />
+        android:name="com.example.lostfound.animalsTrobats.formularioEncontrados"
+        android:label="formularioEncontrados" >
+        <action
+            android:id="@+id/action_formularioEncontrados_to_animalsTrobats"
+            app:destination="@id/animalsTrobats" />
+    </fragment>
     <fragment
         android:id="@+id/formularioPeridos"
         android:name="com.example.lostfound.formularioPeridos"
@@ -51,11 +58,20 @@
     </fragment>
     <fragment
         android:id="@+id/animalSelecionat"
-        android:name="com.example.lostfound.animalSelecionat.animalSelecionatPerduts"
+        android:name="com.example.lostfound.animalsPerduts.animalSelecionatPerduts"
         android:label="animalSelecionat" >
         <action
             android:id="@+id/action_animalSelecionat_to_animalsPerduts2"
             app:destination="@id/animalsPerduts2" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalSelecionatTrobat"
+        android:name="com.example.lostfound.animalsTrobats.AnimalSelecionatTrobat"
+        android:label="fragment_animal_selecionat_trobat"
+        tools:layout="@layout/fragment_animal_selecionat_trobat" >
+        <action
+            android:id="@+id/action_animalSelecionatTrobat_to_animalsTrobats"
+            app:destination="@id/animalsTrobats" />
     </fragment>
 
 </navigation>
