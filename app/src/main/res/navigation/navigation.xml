@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_animalsPerduts2_to_selecionaAnimal"
             app:destination="@id/selecionaAnimal" />
+        <action
+            android:id="@+id/action_animalsPerduts2_to_animalSelecionat"
+            app:destination="@id/animalSelecionat" />
     </fragment>
 
     <fragment
@@ -41,6 +44,18 @@
     <fragment
         android:id="@+id/formularioPeridos"
         android:name="com.example.lostfound.formularioPeridos"
-        android:label="formularioPeridos" />
+        android:label="formularioPeridos" >
+        <action
+            android:id="@+id/action_formularioPeridos_to_animalsPerduts2"
+            app:destination="@id/animalsPerduts2" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalSelecionat"
+        android:name="com.example.lostfound.animalSelecionat.animalSelecionatPerduts"
+        android:label="animalSelecionat" >
+        <action
+            android:id="@+id/action_animalSelecionat_to_animalsPerduts2"
+            app:destination="@id/animalsPerduts2" />
+    </fragment>
 
 </navigation>

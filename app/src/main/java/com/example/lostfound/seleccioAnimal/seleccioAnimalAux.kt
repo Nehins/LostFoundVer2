@@ -13,4 +13,13 @@ class seleccioAnimalAux: ViewModel() {
     var tipusAnimal = ""
     fun getAnimal(): String { return tipusAnimal }
     fun setAnimal(tipus : String){ tipusAnimal = tipus}
+
+//    var telefon = "null"
+//    fun gettelefon(): String { return telefon }
+//    fun settelefon(tipus : String){telefon = tipus}
+
+    var posicioPerdut = ""
+    fun getPosicioPer() : String {return posicioPerdut}
+    fun setPosicioPer(posicio : String) {posicioPerdut = posicio}
+
 }

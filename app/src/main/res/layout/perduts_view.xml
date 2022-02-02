@@ -8,10 +8,11 @@
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
     android:background="@color/ojb"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="2mm">
 
     <TextView
-        android:id="@+id/nombreAnimal"
+        android:id="@+id/nomPerdutView"
         android:layout_width="256dp"
         android:layout_height="24dp"
         android:layout_marginStart="17dp"
@@ -29,25 +30,25 @@
         android:id="@+id/imageView5"
         android:layout_width="103dp"
         android:layout_height="100dp"
-        app:layout_constraintEnd_toStartOf="@+id/nombreAnimal"
+        app:layout_constraintEnd_toStartOf="@+id/nomPerdutView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/raza"
+        android:id="@+id/tipudPerdutViewTipus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="241dp"
-        android:text="Raza"
+        android:text="tipus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/nombreAnimal" />
+        app:layout_constraintTop_toBottomOf="@+id/nomPerdutView" />
 
     <TextView
-        android:id="@+id/telefon"
+        android:id="@+id/telefonPerdutView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -56,6 +57,6 @@
         android:text="972 83 45 56"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/raza" />
+        app:layout_constraintTop_toBottomOf="@+id/tipudPerdutViewTipus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
