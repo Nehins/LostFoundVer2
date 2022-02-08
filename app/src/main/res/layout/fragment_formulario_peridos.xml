@@ -52,13 +52,13 @@
             android:id="@+id/textView14"
             android:layout_width="90dp"
             android:layout_height="35dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="92dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="Imatge"
             android:textColor="#000000"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/añadirGaleria"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DESCRIPCIO" />
 
         <TextView
@@ -129,11 +129,11 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <ImageButton
-            android:id="@+id/añadirGaleria"
+            android:id="@+id/afegirGaleria"
             android:layout_width="67dp"
             android:layout_height="62dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="128dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="72dp"
             android:background="@null"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"

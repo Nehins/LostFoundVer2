@@ -3,9 +3,11 @@ package com.example.lostfound.animalsPerduts
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostfound.R
+import com.squareup.picasso.Picasso
 
 class AdapterPerduts(private val perdutslist : ArrayList<perduts>, private val listener : (perduts) -> Unit): RecyclerView.Adapter<AdapterPerduts.MyViewHolder>() {
 
@@ -25,9 +27,9 @@ class AdapterPerduts(private val perdutslist : ArrayList<perduts>, private val l
         holder.nom.text = animal.nom
         holder.telefon.text = animal.telefon
         holder.tipus.text = animal.tipus
-//        Picasso.get()
-//            .load(animal.imatge)
-//            .into(holder.imatge)
+        Picasso.get()
+            .load(animal.imatge)
+            .into(holder.imatge)
 
         holder.itemView.setOnClickListener(){
             listener(animal)
@@ -41,6 +43,7 @@ class AdapterPerduts(private val perdutslist : ArrayList<perduts>, private val l
     }
 
     public class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+        val imatge: ImageView = itemView.findViewById(R.id.imatge)
         val nom : TextView = itemView.findViewById(R.id.nomPerdutView)
         val tipus : TextView = itemView.findViewById(R.id.tipudPerdutViewTipus)
         val telefon : TextView = itemView.findViewById(R.id.telefonPerdutView)

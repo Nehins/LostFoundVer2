@@ -5,24 +5,20 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.lostfound.R
 import com.example.lostfound.auxGeneral
-import com.example.lostfound.databinding.FragmentAnimalSelecionatPerdutsBinding
 import com.example.lostfound.databinding.FragmentAnimalSelecionatTrobatBinding
 import com.example.lostfound.sharedPreferences.SharedApp
 import com.google.firebase.firestore.FirebaseFirestore
-import androidx.core.app.ActivityCompat.startActivityForResult
-
-
-
+import com.squareup.picasso.Picasso
 
 
 class AnimalSelecionatTrobat : Fragment() {
@@ -55,6 +51,9 @@ class AnimalSelecionatTrobat : Fragment() {
                     binding.localidadTrobat.setText(document["llocTrobat"].toString())
                     binding.detalls.setText(nomUsuari + document["detalls"].toString())
                     binding.telefon.setText(document["telefon"].toString())
+                    Picasso.get()
+                        .load(document["imatge"].toString())
+                        .into(binding.imageView3)
 
                     identificarUsuari = document["telefon"].toString()
 

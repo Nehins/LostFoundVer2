@@ -18,6 +18,7 @@ import com.example.lostfound.auxGeneral
 import com.example.lostfound.databinding.FragmentAnimalSelecionatPerdutsBinding
 import com.example.lostfound.sharedPreferences.SharedApp
 import com.google.firebase.firestore.FirebaseFirestore
+import com.squareup.picasso.Picasso
 
 
 class animalSelecionatPerduts : Fragment() {
@@ -31,7 +32,7 @@ class animalSelecionatPerduts : Fragment() {
             R.layout.fragment_animal_selecionat_perduts,container,false)
 
         aux = ViewModelProvider(requireActivity()).get(auxGeneral::class.java)
-        var identificarUsuari = ""
+
 
         db = FirebaseFirestore.getInstance()
         db.collection("AnimalsPerduts").whereEqualTo("id", aux.getidPerdut())
@@ -51,9 +52,10 @@ class animalSelecionatPerduts : Fragment() {
                     binding.localidadPerdut.setText(document["ultimaVisualitzacio"].toString())
                     binding.detalls.setText(nomUsuari + document["detalls"].toString()+amigable)
                     binding.telefon.setText(document["telefon"].toString())
+                    Picasso.get()
+                        .load(document["imatge"].toString())
+                        .into(binding.imageView3)
 
-
-                    identificarUsuari = document["telefon"].toString()
 
                     if(SharedApp.prefs.telefonUsuari.equals(binding.telefon.text.toString())){
                         binding.trobatButton.setVisibility(View.VISIBLE)
@@ -74,7 +76,6 @@ class animalSelecionatPerduts : Fragment() {
         }
 
         binding.trobatButton.setOnClickListener{
-            if(identificarUsuari.equals(SharedApp.prefs.telefonUsuari)){
                 db.collection("AnimalsPerduts").document(aux.getidPerdut())
                     .delete()
                     .addOnSuccessListener {
@@ -82,14 +83,9 @@ class animalSelecionatPerduts : Fragment() {
                         view?.findNavController()?.navigate(R.id.action_animalSelecionat_to_animalsPerduts2)
                     }
                     .addOnFailureListener {
-                        Toast.makeText(context, "No s'ha pogut calificar l'animal com a trobar", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "No s'ha pogut qualificar l'animal com a trobar", Toast.LENGTH_SHORT).show()
                     }
 
-                }
-
-            else{
-                Toast.makeText(context, "Nomes es pot donar per trobat l'animal quan l'usuari que a introduit la mascota el dona de baixa", Toast.LENGTH_LONG).show()
-            }
         }
 
         return binding.root

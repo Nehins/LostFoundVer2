@@ -2,107 +2,103 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/fondoregistre"
         tools:context=".cambiarUsuari.update_usuari">
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:text="Usuari"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="54dp" />
-
-        <EditText
-            android:id="@+id/nomUsuari"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintTop_toBottomOf="@+id/textView18"
-            tools:layout_editor_absoluteX="50dp" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Telefon"
-            app:layout_constraintTop_toBottomOf="@+id/nomUsuari"
-            tools:layout_editor_absoluteX="53dp" />
-
-        <EditText
-            android:id="@+id/telefon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintTop_toBottomOf="@+id/textView20"
-            tools:layout_editor_absoluteX="50dp" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="29dp"
-            android:text="Correu"
-            app:layout_constraintTop_toBottomOf="@+id/telefon"
-            tools:layout_editor_absoluteX="51dp" />
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="31dp"
-            android:text="Contrasenya"
-            app:layout_constraintTop_toBottomOf="@+id/correu"
-            tools:layout_editor_absoluteX="51dp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="144dp"
             android:text="Modificar"
-            app:layout_constraintTop_toBottomOf="@+id/verContra"
-            tools:layout_editor_absoluteX="258dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verContra" />
+
+        <EditText
+            android:id="@+id/nomUsuari"
+            android:layout_width="253dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="88dp"
+            android:background="@color/brownMasClaro"
+            android:backgroundTint="@color/brownMasClaro"
+            android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/correu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_width="253dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/brownMasClaro"
             android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
+            android:hint="Correu"
             android:inputType="textEmailAddress"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
-            tools:layout_editor_absoluteX="46dp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telefon" />
 
         <EditText
             android:id="@+id/contra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_width="253dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/brownMasClaro"
             android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
+            android:hint="Contrasenya"
             android:inputType="textPassword"
-            app:layout_constraintTop_toBottomOf="@+id/textView27"
-            tools:layout_editor_absoluteX="51dp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/correu" />
 
         <EditText
             android:id="@+id/verContra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
+            android:layout_width="253dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/brownMasClaro"
             android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
+            android:hint="Verificacio Contrasenya"
             android:inputType="textPassword"
-            app:layout_constraintTop_toBottomOf="@+id/contra"
-            tools:layout_editor_absoluteX="50dp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contra" />
+
+        <EditText
+            android:id="@+id/telefon"
+            android:layout_width="253dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/brownMasClaro"
+            android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
+            android:hint="Telefon"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomUsuari" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

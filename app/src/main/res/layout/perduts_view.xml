@@ -23,7 +23,7 @@
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imatge"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Nom" />
 
@@ -34,7 +34,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,7 +50,7 @@
         android:text="tipus"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imatge"
         app:layout_constraintTop_toBottomOf="@+id/nomPerdutView" />
 
     <TextView
@@ -63,20 +63,19 @@
         android:text="972 83 45 56"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imatge"
         app:layout_constraintTop_toBottomOf="@+id/tipudPerdutViewTipus" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="72dp"
         android:layout_height="87dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:rotation="58"
         android:rotationX="8"
         android:rotationY="-4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/dogpaws" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

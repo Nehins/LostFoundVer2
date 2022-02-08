@@ -9,10 +9,11 @@
         android:layout_height="match_parent"
         android:background="@drawable/fondoiniciosesion"
         >
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/trobatsView"
-            android:layout_width="370dp"
-            android:layout_height="619dp"
+            android:layout_width="350dp"
+            android:layout_height="597dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="23dp"
             android:layout_marginEnd="20dp"

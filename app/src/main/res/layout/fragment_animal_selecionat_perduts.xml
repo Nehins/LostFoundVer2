@@ -17,6 +17,7 @@
             android:layout_height="110dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="60dp"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/adorable_3344414_1920" />
