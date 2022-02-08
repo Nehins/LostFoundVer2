@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="#D0EFE1"
         tools:context=".seleccioAnimal.SelecionaAnimal">
 
         <ImageButton
@@ -28,7 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="102dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Gos"
+            android:textColor="#000000"
             app:layout_constraintEnd_toStartOf="@+id/textView19"
             app:layout_constraintTop_toBottomOf="@+id/perroButton" />
 
@@ -38,7 +40,9 @@
             android:layout_height="20dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="184dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Reptils"
+            android:textColor="#000000"
             app:layout_constraintEnd_toStartOf="@+id/textView23"
             app:layout_constraintTop_toBottomOf="@+id/reptilButton" />
 
@@ -87,7 +91,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="69dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Ocells"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pajaroButton" />
 
@@ -96,7 +102,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="88dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Gat"
+            android:textColor="#000000"
             app:layout_constraintEnd_toStartOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/gatoButton" />
 
@@ -118,7 +126,9 @@
             android:layout_width="80dp"
             android:layout_height="18dp"
             android:layout_marginEnd="46dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Rosegadors"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/roedorButton" />
 
@@ -153,8 +163,10 @@
             android:layout_width="78dp"
             android:layout_height="38dp"
             android:layout_marginEnd="53dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Animals de granja"
             android:textAlignment="center"
+            android:textColor="#000000"
             app:layout_constraintEnd_toStartOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/animalesGranjaButton" />
 
@@ -164,8 +176,10 @@
             android:layout_height="20dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="105dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Altres"
             android:textAlignment="center"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrosButton" />
 

@@ -11,4 +11,9 @@
         android:id="@+id/animalsTrobats"
         android:icon="@drawable/iconoencontrados"
         android:title="Trobats" />
+
+    <item
+        android:id="@+id/update_usuari"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Modificar Perfil" />
 </menu>

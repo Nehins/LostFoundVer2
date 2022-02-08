@@ -52,7 +52,12 @@ class animalSelecionatPerduts : Fragment() {
                     binding.detalls.setText(nomUsuari + document["detalls"].toString()+amigable)
                     binding.telefon.setText(document["telefon"].toString())
 
+
                     identificarUsuari = document["telefon"].toString()
+
+                    if(SharedApp.prefs.telefonUsuari.equals(binding.telefon.text.toString())){
+                        binding.trobatButton.setVisibility(View.VISIBLE)
+                    }
 
                 }
             }

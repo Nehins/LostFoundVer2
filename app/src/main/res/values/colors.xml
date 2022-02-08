@@ -8,10 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="greeey">#CECDCD</color>
-    <color name="brown">#D69954</color>
+    <color name="brown">#8d6e63</color>
+    <color name="brownMasClaro">#d5bfa6</color>
     <color name="recycleviewAnimales">#B3968A89</color>
     <color name="ojb">#C5C5C5</color>
-    <color name="kjhbvç">#886B5E</color>
+    <color name="kjhbvç">#b2dfdb</color>
     <color name="transparente" />
     <color name="pocoTransparente">#3E5C5C5C</color>
     <color name="sXDAWEF">#A3727272</color>

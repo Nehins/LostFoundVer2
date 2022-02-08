@@ -20,5 +20,10 @@ class Prefs (context: Context) {
         get() = prefs.getString(SHARED_USUARI, "")!!
         set(value) = prefs.edit().putString(SHARED_USUARI, value).apply()
 
+    var SHARED_ID= "id"
+    var id: String
+        get() = prefs.getString(SHARED_ID, "")!!
+        set(value) = prefs.edit().putString(SHARED_ID, value).apply()
+
 
 }

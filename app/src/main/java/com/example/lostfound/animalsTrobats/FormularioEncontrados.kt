@@ -73,7 +73,7 @@ class formularioEncontrados : Fragment() {
             "detalls" to detalls,
             "llocTrobat" to lloc,
             "telefon" to SharedApp.prefs.telefonUsuari,
-            "nomAmo" to SharedApp.prefs.nomUsuari,
+            "nomCuidador" to SharedApp.prefs.nomUsuari,
             "id" to documentId
 
         )

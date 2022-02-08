@@ -21,7 +21,6 @@ class iniciSesio : AppCompatActivity() {
     private lateinit var binding: ActivityIniciSesioBinding
     private lateinit var auth : FirebaseAuth
     private lateinit var db : FirebaseFirestore
-    private lateinit var telefon : String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +52,7 @@ class iniciSesio : AppCompatActivity() {
             .addOnCompleteListener{ task ->
                 if(task.isSuccessful){
                     Log.d("TAG", "signInWithEmail:success")
-                    obtenerTelefono()
+                    obtenerInfo()
                     val intent = Intent(this, lligamentFragments::class.java)
                     startActivity(intent)
                 }
@@ -65,7 +64,7 @@ class iniciSesio : AppCompatActivity() {
             }
     }
 
-    private fun obtenerTelefono(){
+    private fun obtenerInfo(){
         db = FirebaseFirestore.getInstance()
         db.collection("Usuaris")
             .whereEqualTo("correu", binding.iniciCorreu.text.toString())
@@ -74,6 +73,7 @@ class iniciSesio : AppCompatActivity() {
                 for (document in documents) {
                     SharedApp.prefs.telefonUsuari = document["telefon"].toString()
                     SharedApp.prefs.nomUsuari = document["nom"].toString()
+                    SharedApp.prefs.id = document["id"].toString()
 
                 }
             }

@@ -73,5 +73,9 @@
             android:id="@+id/action_animalSelecionatTrobat_to_animalsTrobats"
             app:destination="@id/animalsTrobats" />
     </fragment>
+    <fragment
+        android:id="@+id/update_usuari"
+        android:name="com.example.lostfound.cambiarUsuari.update_usuari"
+        android:label="update_usuari" />
 
 </navigation>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,43 +9,47 @@
     android:layout_marginStart="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
-    android:background="@color/ojb"
-    android:orientation="vertical"
-    android:layout_marginBottom="2mm">
+    android:layout_marginBottom="2mm"
+    android:background="@drawable/esquinas"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/nomPerdutView"
         android:layout_width="256dp"
         android:layout_height="24dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/arbutus_slab"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Nom" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="103dp"
-        android:layout_height="100dp"
-        app:layout_constraintEnd_toStartOf="@+id/nomPerdutView"
+        android:id="@+id/imatge"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/adorable_3344414_1920" />
 
     <TextView
         android:id="@+id/tipudPerdutViewTipus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="241dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/arbutus_slab"
         android:text="tipus"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/nomPerdutView" />
 
@@ -51,12 +57,26 @@
         android:id="@+id/telefonPerdutView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="190dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/arbutus_slab"
         android:text="972 83 45 56"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/tipudPerdutViewTipus" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="72dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginBottom="16dp"
+        android:rotation="58"
+        android:rotationX="8"
+        android:rotationY="-4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:srcCompat="@drawable/dogpaws" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

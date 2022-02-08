@@ -2,9 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/brownMasClaro"
         tools:context=".animalsTrobats.AnimalSelecionatTrobat">
 
         <TextView
@@ -15,7 +17,8 @@
             android:layout_marginTop="84dp"
             android:layout_marginEnd="69dp"
             android:background="@color/KJUGY"
-            android:backgroundTint="@color/KJUGY"
+            android:backgroundTint="@color/kjhbvç"
+            android:fontFamily="@font/arbutus_slab"
             android:textColor="#000000"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +34,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="73dp"
             android:background="@color/KJUGY"
-            android:backgroundTint="@color/KJUGY"
+            android:backgroundTint="@color/kjhbvç"
+            android:fontFamily="@font/arbutus_slab"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +50,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="56dp"
             android:background="@color/KJUGY"
-            android:backgroundTint="@color/KJUGY"
+            android:backgroundTint="@color/kjhbvç"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +64,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="55dp"
             android:background="@color/KJUGY"
-            android:backgroundTint="@color/KJUGY"
+            android:backgroundTint="@color/kjhbvç"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +77,7 @@
             android:layout_height="110dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="60dp"
+            android:fadeScrollbars="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/adorable_3344414_1920" />
@@ -81,41 +86,46 @@
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="304dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="272dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Trobat a :"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="321dp"
-            android:text="Detalls"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/localidadTrobat" />
 
         <TextView
             android:id="@+id/textView30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="322dp"
+            android:fontFamily="@font/arbutus_slab"
             android:text="Telefon"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detalls" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="321dp"
+            android:fontFamily="@font/arbutus_slab"
+            android:text="Detalls"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/localidadTrobat" />
 
         <EditText
             android:id="@+id/detalls"
@@ -125,6 +135,7 @@
             android:layout_marginTop="13dp"
             android:layout_marginEnd="56dp"
             android:background="@color/KJUGY"
+            android:backgroundTint="@color/kjhbvç"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
@@ -141,6 +152,8 @@
             android:layout_marginEnd="55dp"
             android:backgroundTint="@color/kjhbvç"
             android:text="Animal trobat!"
+            android:textColor="@color/teal_700"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/telefon" />
 

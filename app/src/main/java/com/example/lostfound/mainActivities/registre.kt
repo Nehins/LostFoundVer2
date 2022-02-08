@@ -85,23 +85,19 @@ class registre : AppCompatActivity() {
 
 
     fun crearUsuari(nom : String, telefon : String, email : String, password : String){
+        val document = db.collection("Usuaris").document()
+        val documentId = document.id
 
         val user = hashMapOf(
             "nom" to nom,
             "telefon" to telefon,
             "correu" to email,
             "contrasenya" to password,
+            "id" to documentId
 
         )
 
-        db.collection("Usuaris")
-            .add(user)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding document", e)
-            }
+        document.set(user)
 
     }
 

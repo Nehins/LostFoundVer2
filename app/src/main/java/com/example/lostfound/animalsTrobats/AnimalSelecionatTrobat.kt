@@ -36,6 +36,8 @@ class AnimalSelecionatTrobat : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentAnimalSelecionatTrobatBinding>(inflater,
             R.layout.fragment_animal_selecionat_trobat,container,false)
 
+
+
         aux = ViewModelProvider(requireActivity()).get(auxGeneral::class.java)
         var identificarUsuari = ""
 
@@ -46,7 +48,7 @@ class AnimalSelecionatTrobat : Fragment() {
                 for (document in documents) {
 
 
-                    var nomUsuari = "Nom del amo : "+ document["nomAmo"].toString() +" \n"
+                    var nomUsuari = "Nom del cuidador : "+ document["omCuidador"].toString() +" \n"
 
                     binding.nom2.setText(document["nom"].toString())
                     binding.color.text = document["color"].toString()
@@ -55,6 +57,10 @@ class AnimalSelecionatTrobat : Fragment() {
                     binding.telefon.setText(document["telefon"].toString())
 
                     identificarUsuari = document["telefon"].toString()
+
+                    if(SharedApp.prefs.telefonUsuari.equals(binding.telefon.text.toString())){
+                        binding.trobatButton.setVisibility(View.VISIBLE)
+                    }
 
                 }
             }

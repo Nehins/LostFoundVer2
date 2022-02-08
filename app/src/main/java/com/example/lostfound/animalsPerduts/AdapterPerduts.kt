@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostfound.R
 
@@ -26,6 +25,9 @@ class AdapterPerduts(private val perdutslist : ArrayList<perduts>, private val l
         holder.nom.text = animal.nom
         holder.telefon.text = animal.telefon
         holder.tipus.text = animal.tipus
+//        Picasso.get()
+//            .load(animal.imatge)
+//            .into(holder.imatge)
 
         holder.itemView.setOnClickListener(){
             listener(animal)
