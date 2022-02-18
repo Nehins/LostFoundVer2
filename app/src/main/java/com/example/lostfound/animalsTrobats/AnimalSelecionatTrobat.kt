@@ -44,7 +44,7 @@ class AnimalSelecionatTrobat : Fragment() {
                 for (document in documents) {
 
 
-                    var nomUsuari = "Nom del cuidador : "+ document["omCuidador"].toString() +" \n"
+                    var nomUsuari = "Nom del cuidador : "+ document["nomCuidador"].toString() +" \n"
 
                     binding.nom2.setText(document["nom"].toString())
                     binding.color.text = document["color"].toString()

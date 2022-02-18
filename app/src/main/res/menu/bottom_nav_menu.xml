@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+    <item
+        android:id="@+id/mostrarUsuari"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Perfil" />
 
     <item
         android:id="@+id/animalsPerduts2"
@@ -12,8 +16,5 @@
         android:icon="@drawable/iconoencontrados"
         android:title="Trobats" />
 
-    <item
-        android:id="@+id/update_usuari"
-        android:icon="@drawable/ic_baseline_person_24"
-        android:title="Modificar Perfil" />
+
 </menu>

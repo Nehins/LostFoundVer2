@@ -76,6 +76,18 @@
     <fragment
         android:id="@+id/update_usuari"
         android:name="com.example.lostfound.cambiarUsuari.update_usuari"
-        android:label="update_usuari" />
+        android:label="update_usuari" >
+        <action
+            android:id="@+id/action_update_usuari_to_mostrarUsuari"
+            app:destination="@id/mostrarUsuari" />
+    </fragment>
+    <fragment
+        android:id="@+id/mostrarUsuari"
+        android:name="com.example.lostfound.cambiarUsuari.mostrarUsuari"
+        android:label="mostrarUsuari" >
+        <action
+            android:id="@+id/action_mostrarUsuari_to_update_usuari"
+            app:destination="@id/update_usuari" />
+    </fragment>
 
 </navigation>

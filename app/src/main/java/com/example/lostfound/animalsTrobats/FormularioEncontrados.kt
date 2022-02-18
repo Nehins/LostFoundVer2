@@ -82,12 +82,17 @@ class formularioEncontrados : Fragment() {
 
     fun crearAnimalTrobat(tipus : String, nom : String, color : String, lloc : String, detalls : String, imatge : String){
 
+        var nombre = nom
+        if (nombre.equals("")){
+            nombre = "<Sense nom>"
+        }
+
         val document = db.collection("AnimalsTrobats").document()
         val documentId = document.id
 
         val animal = hashMapOf(
             "tipus" to tipus,
-            "nom" to nom,
+            "nom" to nombre,
             "color" to color,
             "detalls" to detalls,
             "llocTrobat" to lloc,
