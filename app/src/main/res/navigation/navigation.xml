@@ -6,12 +6,13 @@
     app:startDestination="@id/animalsPerduts2">
     <fragment
         android:id="@+id/animalsPerduts2"
-        android:name="com.example.lostfound.animalsPerduts.animalsPerduts"
-        android:label="fragment_animals_perduts"
-        tools:layout="@layout/fragment_animals_perduts" >
+        android:name="com.sdalmau.lostfound.animalsPerduts.animalsPerduts"
+        android:label="Animals perduts"
+        tools:layout="@layout/fragment_animals_perduts">
         <action
             android:id="@+id/action_animalsPerduts2_to_selecionaAnimal"
-            app:destination="@id/selecionaAnimal" />
+            app:destination="@id/selecionaAnimal"
+            app:popUpTo="@id/animalsPerduts2" />
         <action
             android:id="@+id/action_animalsPerduts2_to_animalSelecionat"
             app:destination="@id/animalSelecionat" />
@@ -19,75 +20,93 @@
 
     <fragment
         android:id="@+id/animalsTrobats"
-        android:name="com.example.lostfound.animalsTrobats.animalsTrobats"
+        android:name="com.sdalmau.lostfound.animalsTrobats.animalsTrobats"
         android:label="fragment_animals_trobats"
         tools:layout="@layout/fragment_animals_trobats" >
         <action
             android:id="@+id/action_animalsTrobats_to_selecionaAnimal"
-            app:destination="@id/selecionaAnimal" />
+            app:destination="@id/selecionaAnimal"
+            app:popUpTo="@id/animalsTrobats" />
         <action
             android:id="@+id/action_animalsTrobats_to_animalSelecionatTrobat"
-            app:destination="@id/animalSelecionatTrobat" />
+            app:destination="@id/animalSelecionatTrobat"
+            app:popUpTo="@id/animalsTrobats" />
     </fragment>
     <fragment
         android:id="@+id/selecionaAnimal"
-        android:name="com.example.lostfound.seleccioAnimal.SelecionaAnimal"
+        android:name="com.sdalmau.lostfound.seleccioAnimal.SelecionaAnimal"
         android:label="SelecionaAnimal" >
         <action
             android:id="@+id/action_selecionaAnimal_to_formularioEncontrados"
-            app:destination="@id/formularioEncontrados" />
+            app:destination="@id/formularioEncontrados"
+            app:popUpTo="@id/animalSelecionat" />
         <action
             android:id="@+id/action_selecionaAnimal_to_formularioPeridos"
-            app:destination="@id/formularioPeridos" />
+            app:destination="@id/formularioPeridos"
+            app:popUpTo="@id/selecionaAnimal" />
     </fragment>
     <fragment
         android:id="@+id/formularioEncontrados"
-        android:name="com.example.lostfound.animalsTrobats.formularioEncontrados"
+        android:name="com.sdalmau.lostfound.animalsTrobats.formularioEncontrados"
         android:label="formularioEncontrados" >
         <action
             android:id="@+id/action_formularioEncontrados_to_animalsTrobats"
-            app:destination="@id/animalsTrobats" />
+            app:destination="@id/animalsTrobats"
+            app:popUpTo="@id/animalsPerduts2"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/formularioPeridos"
-        android:name="com.example.lostfound.formularioPeridos"
+        android:name="com.sdalmau.lostfound.formularioPeridos"
         android:label="formularioPeridos" >
         <action
             android:id="@+id/action_formularioPeridos_to_animalsPerduts2"
-            app:destination="@id/animalsPerduts2" />
+            app:destination="@id/animalsPerduts2"
+            app:popUpTo="@id/formularioPeridos" />
     </fragment>
     <fragment
         android:id="@+id/animalSelecionat"
-        android:name="com.example.lostfound.animalsPerduts.animalSelecionatPerduts"
+        android:name="com.sdalmau.lostfound.animalsPerduts.animalSelecionatPerduts"
         android:label="animalSelecionat" >
         <action
             android:id="@+id/action_animalSelecionat_to_animalsPerduts2"
-            app:destination="@id/animalsPerduts2" />
+            app:destination="@id/animalsPerduts2"
+            app:popUpTo="@id/animalSelecionat" />
     </fragment>
     <fragment
         android:id="@+id/animalSelecionatTrobat"
-        android:name="com.example.lostfound.animalsTrobats.AnimalSelecionatTrobat"
+        android:name="com.sdalmau.lostfound.animalsTrobats.AnimalSelecionatTrobat"
         android:label="fragment_animal_selecionat_trobat"
         tools:layout="@layout/fragment_animal_selecionat_trobat" >
         <action
             android:id="@+id/action_animalSelecionatTrobat_to_animalsTrobats"
-            app:destination="@id/animalsTrobats" />
+            app:destination="@id/animalsTrobats"
+            app:popUpTo="@id/animalSelecionatTrobat" />
     </fragment>
     <fragment
         android:id="@+id/update_usuari"
-        android:name="com.example.lostfound.cambiarUsuari.update_usuari"
+        android:name="com.sdalmau.lostfound.cambiarUsuari.update_usuari"
         android:label="update_usuari" >
         <action
             android:id="@+id/action_update_usuari_to_mostrarUsuari"
-            app:destination="@id/mostrarUsuari" />
+            app:destination="@id/mostrarUsuari"
+            app:popUpTo="@id/animalsPerduts2" />
+        <action
+            android:id="@+id/action_update_usuari_to_animalsPerduts22"
+            app:destination="@id/animalsPerduts2" />
     </fragment>
     <fragment
         android:id="@+id/mostrarUsuari"
-        android:name="com.example.lostfound.cambiarUsuari.mostrarUsuari"
+        android:name="com.sdalmau.lostfound.cambiarUsuari.mostrarUsuari"
         android:label="mostrarUsuari" >
         <action
             android:id="@+id/action_mostrarUsuari_to_update_usuari"
-            app:destination="@id/update_usuari" />
+            app:destination="@id/update_usuari"
+            app:popUpTo="@id/mostrarUsuari" />
     </fragment>
+    <activity
+        android:id="@+id/iniciSesio"
+        android:name="com.sdalmau.lostfound.mainActivities.iniciSesio"
+        android:label="iniciSesio" />
 
 </navigation>

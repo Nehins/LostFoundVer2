@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "819894580766",
+    "firebase_url": "https://lostandfound-4ac83-default-rtdb.firebaseio.com",
     "project_id": "lostandfound-4ac83",
     "storage_bucket": "lostandfound-4ac83.appspot.com"
   },
@@ -21,6 +22,35 @@
             "certificate_hash": "c4943080a90ff3fdaa3c79faaa12651928200889"
           }
         },
+        {
+          "client_id": "819894580766-tqnh02llm0nlhbohrqvu06mbeapauohl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjKltNXC2PBo1M8NgmxBfTKQmWAAcnNI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819894580766-tqnh02llm0nlhbohrqvu06mbeapauohl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819894580766:android:965d9262e970e22227600f",
+        "android_client_info": {
+          "package_name": "com.sdalmau.lostfound"
+        }
+      },
+      "oauth_client": [
         {
           "client_id": "819894580766-tqnh02llm0nlhbohrqvu06mbeapauohl.apps.googleusercontent.com",
           "client_type": 3

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lostfound">
+    package="com.sdalmau.lostfound">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -9,24 +9,26 @@
 <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
 
     <application
-        android:name="com.example.lostfound.sharedPreferences.SharedApp"
+        android:name="com.sdalmau.lostfound.sharedPreferences.SharedApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/new_animal"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LostFound">
 
         <activity
-            android:name=".mainActivities.registre"
-            android:exported="false" />
+            android:name="com.sdalmau.lostfound.mainActivities.registre"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".mainActivities.lligamentFragments"
-            android:exported="false" />
+            android:name="com.sdalmau.lostfound.mainActivities.lligamentFragments"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".mainActivities.iniciSesio"
-            android:exported="false" />
-
+            android:name="com.sdalmau.lostfound.mainActivities.iniciSesio"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -44,12 +46,14 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".SplashActivity"
-            android:exported="true" />
-        <activity
-            android:name=".mainActivities.MainActivity"
+            android:name="com.sdalmau.lostfound.SplashActivity"
             android:exported="true"
-            android:theme="@style/SplashScreen">
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.sdalmau.lostfound.mainActivities.MainActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

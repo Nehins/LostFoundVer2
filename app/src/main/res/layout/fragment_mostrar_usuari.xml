@@ -11,12 +11,25 @@
         tools:layout_editor_absoluteX="-14dp"
         tools:layout_editor_absoluteY="-2dp">
 
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="377dp"
+            android:layout_height="177dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/esquinas"
+            android:backgroundTint="@color/kjhbvç"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="157dp"
-            android:layout_height="153dp"
-            android:layout_marginStart="124dp"
-            android:layout_marginTop="56dp"
+            android:layout_width="139dp"
+            android:layout_height="152dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="68dp"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -26,92 +39,89 @@
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="Telefon:"
             android:textColor="#000000"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/nomPerfil" />
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="64dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="Nom"
             android:textColor="#000000"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="9dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="Correu"
             android:textColor="#000000"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/telefonPerfil" />
 
         <TextView
             android:id="@+id/correuPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="11dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="TextView"
             android:textColor="#000000"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/textView26"
-            app:layout_constraintTop_toBottomOf="@+id/telefonPerfil" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
         <TextView
             android:id="@+id/nomPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="11dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="TextView"
             android:textColor="#000000"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         <TextView
             android:id="@+id/telefonPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="11dp"
             android:fontFamily="@font/arbutus_slab"
             android:text="TextView"
             android:textColor="#000000"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/textView18"
-            app:layout_constraintTop_toBottomOf="@+id/nomPerfil" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
         <Button
             android:id="@+id/modificarPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="141dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/kjhbvç"
             android:fontFamily="@font/arbutus_slab"
             android:text="Modificar"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
